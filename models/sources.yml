@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: lindaykentproject
+    schema: raw_data
+    tables:
+      - name: subscription_sales
+      - name: incidents
+      - name: support_tickets

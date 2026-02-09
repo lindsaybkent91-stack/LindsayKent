@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_incidents
+    description: "Cleaned incident data with MTTR calculations"
+    columns:
+      - name: incident_id
+        description: "Primary key for incidents"
+        data_tests:
+          - unique
+          - not_null
+      - name: severity
+        description: "Severity level of the incident"
+        data_tests:
+          - accepted_values:
+              values: ['Critical', 'High', 'Medium', 'Low']
